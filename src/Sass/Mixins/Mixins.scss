@@ -1,0 +1,11 @@
+@mixin boxShadow{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+@mixin borderRadius{
+    border-radius: 25px;
+}
+
+@mixin LinkStyle{
+    color: $Pink;
+    text-decoration: none;
+}

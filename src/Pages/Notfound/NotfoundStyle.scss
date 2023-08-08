@@ -1,0 +1,17 @@
+@import 'src/Sass/BaseElements.scss';
+
+.NotfoundMain{
+    color: $Pink;
+    text-align: center;
+    padding-bottom: 5%;
+    .NotfoundTitle{
+        font-size: 280px;
+        font-weight: 700;
+        padding-top: 7%;
+        padding-bottom: 3%;
+    }
+    .NotfoundLink{
+        @include LinkStyle;
+        
+    }    
+}

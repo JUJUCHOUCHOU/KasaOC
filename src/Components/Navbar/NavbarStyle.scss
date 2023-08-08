@@ -1,0 +1,18 @@
+@import '../../Sass/BaseElements.scss';
+
+.Navbar{
+    width: 98%;
+    padding-left: 5%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 6%;
+    .activeLink .inactivelink{
+        @include LinkStyle;
+        justify-content: space-between;
+    }
+    .LogoPink{
+        width: 200px;
+    }
+}

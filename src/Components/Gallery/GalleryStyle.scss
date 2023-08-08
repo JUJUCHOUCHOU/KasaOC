@@ -1,0 +1,11 @@
+@import 'src/Sass/BaseElements.scss';
+
+
+.Cardgallery{
+    display: flex;
+    flex-direction: column;
+    .CardContent{
+        width: 22%;
+        height: auto;
+    }
+}
