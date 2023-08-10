@@ -18,14 +18,14 @@ function Navbar() {
                 {/* Apply the "activeLink" class if the current route matches the link */}
                 {/* Apply the "inactiveLink" class if the current route does not match the link */}
                 <Link to="/" className={currentRoute === '/' ? 'activeLink' : 'inactiveLink'}>
-                    Welcome
+                    Accueil
                 </Link>
 
                 {/* Link to the "About" page */}
                 {/* Apply the "activeLink" class if the current route matches the link */}
                 {/* Apply the "inactiveLink" class if the current route does not match the link */}
                 <Link to="/About" className={currentRoute === '/About' ? 'activeLink' : 'inactiveLink'}>
-                    About
+                    A propos
                 </Link>
             </div>
         </nav>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import Collapse from '../../Components/Collapse/Collapse';
@@ -8,14 +8,18 @@ import star_Grey from '../../Assets/star_Grey.png';
 import star_Pink from '../../Assets/star_Pink.png';
 
 function Locations() {
-  const [rating, setRating] = useState(5); 
+
+  const targetId = 'c67ab8a7'; 
+
+ 
+  const filteredData = datas.filter(item => item.id === targetId);
 
   return (
     <div className="Locations">
       <Navbar />
-      <Carousel />
-      {datas.map((item) => (
+      {filteredData.map((item) => (
         <div key={item.id}>
+          <Carousel items={[{ pictures: [item.pictures] }]} />
           <div className='InfoLocation'>
             <div className='InfoLocationPlace'>
               <h3 className='InfoLocationTitle'>{item.title}</h3>
@@ -27,27 +31,31 @@ function Locations() {
               </div>
             </div>
             <div className='InfoLocationOther'>
-            <div className='InfoLocationHost'>
-              <h6 className='InfoLocationHostName'>{item.host.name}</h6>
+              <div className='InfoLocationHost'>
+                <h6 className='InfoLocationHostName'>{item.host.name}</h6>
                 <img src={item.host.picture} alt={`Picture of ${item.host.name}`} className='InfoLocationPictureHost'/>
               </div>
               <div className="RatingHost">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <img
                     key={index}
-                    src={index < rating ? star_Pink : star_Grey}
+                    src={index < item.rating ? star_Pink : star_Grey}
                     alt="star"
                   />
                 ))}
               </div>
             </div>
           </div>
-          {item.description && (
-            <Collapse data={item.description} pageName="Locations" />
-          )}
-          {item.tags && (
-            <Collapse data={item.tags} pageName="Locations" />
-          )}
+          <Collapse
+            title={'Description'}
+            content={[item.description]}
+            pageName="Locations"
+          />
+          <Collapse
+            title={'Equipements'}
+            content={item.equipments}
+            pageName="Locations"
+          />
         </div>
       ))}
       <Footer />
@@ -56,4 +64,3 @@ function Locations() {
 }
 
 export default Locations;
-

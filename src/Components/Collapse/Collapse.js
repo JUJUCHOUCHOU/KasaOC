@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import arrow_top from '../../Assets/arrow_top.png';
 
-const Collapse = ({ title, data, pageName }) => {
+const Collapse = ({ title, content, pageName }) => {
   const [visible, setVisible] = useState(false);
 
   const handleToggle = () => {
@@ -16,16 +16,17 @@ const Collapse = ({ title, data, pageName }) => {
         </h3>
         {pageName === 'Locations' && visible && (
           <ul>
-            {data.map((item) => (
-              <li key={item.id}>
-                {item.title}: {item.content}
-                {item.cover && ` - Cover: ${item.cover}`}
+            {content.map((item, index) => (
+              <li key={index}>
+                {item}
               </li>
             ))}
           </ul>
         )}
         {pageName === 'About' && (
-          <p style={{ display: visible ? 'block' : 'none' }}>{data}</p>
+          <p style={{ display: visible ? 'block' : 'none' }}>
+            {content}
+          </p>
         )}
       </div>
     </div>
@@ -33,8 +34,3 @@ const Collapse = ({ title, data, pageName }) => {
 };
 
 export default Collapse;
-
-
-
-
-

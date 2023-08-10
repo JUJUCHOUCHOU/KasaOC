@@ -1,4 +1,3 @@
-//page for 'à propos'
 import React from 'react';
 import Footer from '../../Components/Footer/Footer';
 import Banner from '../../Components/Banner/Banner';
@@ -15,7 +14,7 @@ function About() {
         <Collapse
           key={item.id}
           title={item.title}
-          data={item.content}
+          content={item.content}
           pageName="About"
         />
       ))}

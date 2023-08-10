@@ -1,11 +1,11 @@
-//link for each locations 
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './CardStyle.scss';
 
-function Card({ title, cover }) {
+function Card({ id, title, cover, handleCardClick }) {
     return (
         <Link to={`/Locations/`} className="galleryCard">
-            <div className="cardContainer">
+            <div className="cardContainer" onClick={() => handleCardClick(id)}>
                 <h2>{title}</h2>
                 <img src={cover} alt={title} />
             </div>
@@ -14,3 +14,4 @@ function Card({ title, cover }) {
 }
 
 export default Card;
+

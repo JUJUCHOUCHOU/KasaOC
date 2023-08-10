@@ -25,10 +25,10 @@ function Carousel() {
         onClick={prevSlide}
       />
       <div className="carousel_images">
-        {data[currentIndex].pictures.map((picture, index) => {
+        {data[currentIndex].pictures.map((pictures, index) => {
           return (
             <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
-              <img src={picture} alt={`Image ${index + 1}`} />
+              <img src={pictures} alt={`Image ${index + 1}`} />
             </div>
           );
         })}
