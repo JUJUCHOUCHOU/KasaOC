@@ -5,10 +5,14 @@
     text-align: center;
     padding-bottom: 5%;
     .NotfoundTitle{
-        font-size: 280px;
-        font-weight: 700;
-        padding-top: 7%;
+        font-size: 50px;
+        font-weight: 800;
+        padding-top: 2%;
         padding-bottom: 3%;
+    }
+    .NotfoundText{
+        font-size: 18px;
+        padding-bottom: 4%;
     }
     .NotfoundLink{
         @include LinkStyle;

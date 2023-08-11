@@ -1,21 +1,24 @@
+// ParentComponent.js
 import React from 'react';
-import Data from '../../Data/Data.js';
-import './GalleryStyle.scss';
-import Card from '../../Components/Card/Card.js'; 
+import Card from '../Card/Card.js'; 
+import datas from '../../Data/Data.js'; 
 
 function Gallery() {
-  console.log(Data);
+  const handleCardClick = (id) => {  {/*choose the card and say the good ID for logement page*/}
+  };
+
   return (
-    <main className='Cardgallery'>
-      {Data.map((apartment) => (
+    <div>
+      {datas.map((item) => (
         <Card
-          key={apartment.id}
-          id={apartment.id}
-          title={apartment.title}
-          cover={apartment.cover}
+          key={item.id}
+          id={item.id}
+          title={item.title}
+          cover={item.cover}
+          handleCardClick={handleCardClick}
         />
       ))}
-    </main>
+    </div>
   );
 }
 

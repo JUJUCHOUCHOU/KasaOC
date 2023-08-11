@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome />}/>
         <Route path="/About" element={<About />}/>
-        <Route path="/Locations"element={<Locations />}/>
+        <Route path="/Locations/:id"element={<Locations />}/>{/*we have to say 'ID' for the good card path*/}
         <Route path="*" element={<Notfound />}/>{/*Last because if other pages are not found...*/}
       </Routes>
     </Router>

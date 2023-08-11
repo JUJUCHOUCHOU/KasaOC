@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import arrow_top from '../../Assets/arrow_top.png';
+import './CollapseStyle.scss';
 
 const Collapse = ({ title, content, pageName }) => {
   const [visible, setVisible] = useState(false);
@@ -11,11 +12,11 @@ const Collapse = ({ title, content, pageName }) => {
   return (
     <div>
       <div className='CollapseBar'>
-        <h3 onClick={handleToggle} style={{ cursor: 'pointer' }}>
-          {title} <img src={arrow_top} alt="Arrow Top" style={{ transform: visible ? 'rotate(180deg)' : 'rotate(0deg)' }} />
+        <h3 className='CollapseTitle' onClick={handleToggle} style={{ cursor: 'pointer' }}>
+          {title} <img src={arrow_top} alt="Arrow Top" className={`collapse-arrow ${visible ? 'open' : ''}`} />
         </h3>
         {pageName === 'Locations' && visible && (
-          <ul>
+          <ul className="collapse-list">
             {content.map((item, index) => (
               <li key={index}>
                 {item}
@@ -24,7 +25,7 @@ const Collapse = ({ title, content, pageName }) => {
           </ul>
         )}
         {pageName === 'About' && (
-          <p style={{ display: visible ? 'block' : 'none' }}>
+          <p className="CollapseContent" style={{ display: visible ? 'block' : 'none' }}>
             {content}
           </p>
         )}

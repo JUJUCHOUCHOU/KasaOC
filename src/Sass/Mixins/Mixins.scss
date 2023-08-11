@@ -4,8 +4,20 @@
 @mixin borderRadius{
     border-radius: 25px;
 }
+@mixin collapseBorderRadius{
+    border-radius: 10px;
+}
 
 @mixin LinkStyle{
     color: $Pink;
     text-decoration: none;
+}
+
+@mixin FlexAndSpace{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin FlexAndCenter{
+    display: flex;
+    justify-content: center;
 }

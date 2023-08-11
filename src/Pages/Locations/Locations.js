@@ -6,12 +6,13 @@ import Carousel from '../../Components/Carousel/Carousel';
 import datas from '../../Data/Data.js';
 import star_Grey from '../../Assets/star_Grey.png';
 import star_Pink from '../../Assets/star_Pink.png';
+import './LocationStyle.scss';
 
 function Locations() {
+  // Remplacez "targetId" par l'ID que vous souhaitez cibler
+  const targetId = 'c67ab8a7'; // Par exemple
 
-  const targetId = 'c67ab8a7'; 
-
- 
+  // Filtrer les données en fonction de l'ID cible
   const filteredData = datas.filter(item => item.id === targetId);
 
   return (
