@@ -1,20 +1,18 @@
 @import '../../Sass/BaseElements.scss';
 
 .Navbar{
-    width: 100%;
     padding-left: 5%;
     padding-top: 2%;
     @include FlexAndSpace;
     align-items: center;
-    padding-right: 2%;
-    .navbarLink{
-        margin-left: 2%;
-    }
-    .activeLink .inactivelink{
-        @include LinkStyle;
-        justify-content: space-between;
-        &:active{
-            border-bottom: 2px solid $Pink;
+    padding-right: 5%;
+    .NavbarLink{
+        width: 15%;
+        @include FlexAndSpace;
+        .activelink, .inactiveLink{
+            &:active{
+                border-bottom: 2px solid $Pink;
+            }
         }
     }
     .LogoPink{

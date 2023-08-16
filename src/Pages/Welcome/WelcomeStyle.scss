@@ -1,7 +1,13 @@
 @import 'src/Sass/BaseElements.scss';
 
-.Welcome{
-    display:flex;
-    flex-wrap: wrap;
-    
+.WelcomeMain{
+    background-color: $Grey;
+    @include borderRadius;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 5.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }

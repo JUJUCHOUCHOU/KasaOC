@@ -1,2 +1,75 @@
 @import 'src/Sass/BaseElements.scss';
 
+.InfoLocation{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    width: 100%;
+    .InfoLocationPlace{
+        align-items: center;
+    }
+    .InfoLocationTitle{
+        font-size: 36px;
+        padding-bottom: 1%;
+        line-height: 52px;
+        color: $Pink;
+    }
+    .InfoLocationCity{
+        font-size: 18px;
+        padding-bottom: 2%;
+        line-height: 25px;
+        color: $Pink;
+    }
+    .InfoLocationTags{
+        display: grid;
+        grid-auto-flow: column;
+        gap: 3%;
+        padding-bottom: 2%;
+        .Tag{
+            background-color: $Pink;
+            color: $White;
+            padding: 1% 2%;
+            @include borderRadius;
+            text-align: center;
+            width: 200px;
+        }
+    }
+    .InfoLocationOther{
+        margin-right: 3%;
+        margin-top: 1%;
+        .InfoLocationHost{
+            display: flex;
+            align-items: center;
+            color: $Pink;
+        }
+        .InfoLocationHost{
+            display: flex;
+            align-items: center;
+        }
+        .InfoLocationHostName{
+            display: flex;
+            flex-direction: column;
+            margin-right: 2%;
+            font-size: 16px;
+            text-align: end;
+            font-weight: 500;
+        }
+        .InfoLocationPictureHost{
+            border-radius: 50%;
+
+        }
+        .RatingHost{
+            margin-top: 1%;
+            padding-left: 92px;
+            padding-bottom: 2%;
+            & img{
+                width: 25px;
+                padding-left: 4%;
+            }
+        }
+    }
+    .CollapseDiv{
+        margin-left: 4%;
+    }
+}

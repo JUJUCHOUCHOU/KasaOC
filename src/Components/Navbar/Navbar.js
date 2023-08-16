@@ -13,7 +13,7 @@ function Navbar() {
         <nav className='Navbar'>
             {/* Display the pink logo */}
             <img src={Logo_Pink} alt='Kasa Logo' className="LogoPink" />
-            <div className="Navbarlink">
+            <div className="NavbarLink">
                 {/* Link to the "Welcome" page */}
                 {/* Apply the "activeLink" class if the current route matches the link */}
                 {/* Apply the "inactiveLink" class if the current route does not match the link */}

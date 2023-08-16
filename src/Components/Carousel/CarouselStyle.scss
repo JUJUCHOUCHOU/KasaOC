@@ -5,21 +5,27 @@
     position: relative;
     margin-left: 5%;
     margin-top: 5%;
+    .image_container{
+        height: 330px;
+        width: 1240px;
+    }
     .carousel_arrow{
-        position: absolute;
-        
+        position: absolute; 
     }
     .carousel_arrow_left{
-        bottom: 50%;
+        bottom: 42%;
     }
     .carousel_arrow_right{
-        bottom: 53%;
-        left: 86%;
+        bottom: 49%;
+        left: 90%;
     }
     .slideNumber{
         position: absolute;
-        bottom: 99%;
-        left: 45%;
+        bottom: 2%;
+        left: 48%;
+        color: $White;
+        font-size: 18px;
+        font-weight: 500;
     }
 }
    

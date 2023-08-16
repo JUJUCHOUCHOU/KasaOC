@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route, useParams, Navigate } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import Collapse from '../../Components/Collapse/Collapse';
@@ -9,59 +10,60 @@ import star_Pink from '../../Assets/star_Pink.png';
 import './LocationStyle.scss';
 
 function Locations() {
-  // Remplacez "targetId" par l'ID que vous souhaitez cibler
-  const targetId = 'c67ab8a7'; // Par exemple
+  const { id } = useParams();
 
-  // Filtrer les données en fonction de l'ID cible
-  const filteredData = datas.filter(item => item.id === targetId);
+  const data = datas.find(item => item.id === id);
+
+  if (!data) {
+    return <Navigate to="*" replace={true} />;
+  }
+
+  const { pictures, title, location, tags, host, rating, description, equipments } = data;
+
+  const starImages = Array.from({ length: 5 }).map((_, index) => (
+    <img key={index} src={index < rating ? star_Pink : star_Grey} alt="star" />
+  ));
 
   return (
     <div className="Locations">
       <Navbar />
-      {filteredData.map((item) => (
-        <div key={item.id}>
-          <Carousel items={[{ pictures: [item.pictures] }]} />
-          <div className='InfoLocation'>
-            <div className='InfoLocationPlace'>
-              <h3 className='InfoLocationTitle'>{item.title}</h3>
-              <h6 className='InfoLocationCity'>{item.location}</h6>
-              <div className='InfolocationTags'>
-                {item.tags.map((tag, index) => (
-                  <span key={index} className='Tag'>{tag}</span>
-                ))}
-              </div>
-            </div>
-            <div className='InfoLocationOther'>
-              <div className='InfoLocationHost'>
-                <h6 className='InfoLocationHostName'>{item.host.name}</h6>
-                <img src={item.host.picture} alt={`Picture of ${item.host.name}`} className='InfoLocationPictureHost'/>
-              </div>
-              <div className="RatingHost">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <img
-                    key={index}
-                    src={index < item.rating ? star_Pink : star_Grey}
-                    alt="star"
-                  />
-                ))}
-              </div>
+      <div>
+        <Carousel items={[{ pictures: [pictures] }]} />
+        <div className='InfoLocation'>
+          <div className='InfoLocationPlace'>
+            <h3 className='InfoLocationTitle'>{title}</h3>
+            <h6 className='InfoLocationCity'>{location}</h6>
+            <div className='InfoLocationTags'>
+              {tags.map((tag, index) => (
+                <span key={index} className='Tag'>{tag}</span>
+              ))}
             </div>
           </div>
-          <Collapse
-            title={'Description'}
-            content={[item.description]}
-            pageName="Locations"
-          />
-          <Collapse
-            title={'Equipements'}
-            content={item.equipments}
-            pageName="Locations"
-          />
+          <div className='InfoLocationOther'>
+            <div className='InfoLocationHost'>
+              <h6 className='InfoLocationHostName'>{host.name}</h6>
+              <img src={host.picture} alt={`location host  ${host.name}`} className='InfoLocationPictureHost' />
+            </div>
+            <div className="RatingHost">{starImages}</div>
+          </div>
         </div>
-      ))}
+        <div className='CollapseDiv'>
+          <Collapse title={'Description'}>
+            <p>{description}</p>
+          </Collapse>
+          <Collapse title={'Equipements'} content={equipments}>
+            <ul className="collapse-list">
+              {equipments.map((data, index) => (
+                <li key={index}>{data}</li>
+              ))}
+            </ul>
+          </Collapse>
+        </div>
+      </div>
       <Footer />
     </div>
   );
 }
 
 export default Locations;
+

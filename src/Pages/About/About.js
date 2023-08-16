@@ -4,21 +4,20 @@ import Banner from '../../Components/Banner/Banner';
 import Navbar from '../../Components/Navbar/Navbar';
 import Collapse from '../../Components/Collapse/Collapse';
 import AboutDatas from '../../Data/AboutData.js';
+import Bannerabout from '../../Assets/bannerabout_image.png'
 import './AboutStyle.scss';
 
 function About() {
   return (
     <div className="About">
       <Navbar />
-      <Banner />
+      <Banner image={Bannerabout}/>
       <div className='AboutMain'>
       {AboutDatas.map((item) => (
-        <Collapse
-          key={item.id}
-          title={item.title}
-          content={item.content}
-          pageName="About"
-        />
+       <Collapse
+       title={AboutDatas.title}>
+     <p>{AboutDatas.content}</p>
+     </Collapse>
       ))}
       </div>
       <Footer />
