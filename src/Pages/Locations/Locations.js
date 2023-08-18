@@ -47,7 +47,7 @@ function Locations() {
             <div className="RatingHost">{starImages}</div>
           </div>
         </div>
-        <div className='CollapseDiv'>
+        <div className='CollapseLocation'>
           <Collapse title={'Description'}>
             <p>{description}</p>
           </Collapse>

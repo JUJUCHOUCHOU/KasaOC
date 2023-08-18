@@ -27,6 +27,12 @@
         font-size: 18px;
         font-weight: 500;
     }
+    .imageCarousel{
+        height: 415px;
+        width: fit-content;
+        object-fit: cover;
+        @include borderRadius;
+    }
 }
    
 

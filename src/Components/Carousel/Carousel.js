@@ -39,7 +39,7 @@ function Carousel() {
         {data[currentIndex].pictures.map((picture, index) => (
           <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
             <div className="image-container">
-              <img src={picture} alt={`carousel ${index + 1}`} />
+              <img className='imageCarousel' src={picture} alt={`carousel ${index + 1}`} />
               {slideNumber && <p className="slideNumber">{slideNumber}</p>}
             </div>
           </div>

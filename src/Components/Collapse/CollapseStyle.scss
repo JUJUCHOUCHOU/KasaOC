@@ -4,7 +4,8 @@
   background-color: $Pink;
   color: $White;
   margin-bottom: 2%;
-
+  width: 95%;
+  margin-left: 3%;
   @include collapseBorderRadius;
   .CollapseContent {
     width: 100%;

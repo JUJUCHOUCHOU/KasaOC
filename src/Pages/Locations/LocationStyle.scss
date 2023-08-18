@@ -36,7 +36,7 @@
         }
     }
     .InfoLocationOther{
-        margin-right: 3%;
+        margin-right: 4%;
         margin-top: 1%;
         .InfoLocationHost{
             display: flex;
@@ -69,7 +69,11 @@
             }
         }
     }
-    .CollapseDiv{
-        margin-left: 4%;
-    }
+   
+}
+.CollapseLocation{
+    margin-left: 2%;
+    margin-right: 3%;
+    @include FlexAndSpace;
+    text-align: left;
 }
