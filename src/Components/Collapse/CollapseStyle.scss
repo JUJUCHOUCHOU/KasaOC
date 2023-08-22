@@ -17,6 +17,7 @@
     @include FlexAndSpace;
     align-items: center;
     padding-left: 1%;
+    font-size: 16px;
   }
   .collapse-arrow {
     transition: transform 0.3s ease-in-out;
@@ -27,7 +28,7 @@
   .collapseContent, ul {
     background-color: $Grey;
     border-radius: 0 0 10px 10px;
-    font-size: 10px;
+    font-size: 12px;
     padding: 1%;
 
     & li, p{
@@ -35,3 +36,8 @@
     }
   }
 }
+@media (max-width: 750px) {
+  .CollapseBar{
+    margin-bottom: 8%;
+  }
+} 

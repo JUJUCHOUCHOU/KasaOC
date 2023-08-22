@@ -36,3 +36,24 @@
 }
    
 
+@media (max-width: 750px) {
+    .containerCarousel{
+        .imageCarousel{
+            height: 205px;
+            width: 295px;
+        }
+        .carousel_arrow_left {
+            width: 20px;
+            height: 20px;
+            bottom: 46%;
+        }
+        .carousel_arrow_right {
+            width: 10px; /* Ajuster la largeur */
+            height: 14px; /* Ajuster la hauteur */
+        }
+        .slideNumber{
+            font-size: 12px;
+            left: 43%;
+        }   
+    }
+}

@@ -5,6 +5,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Collapse from '../../Components/Collapse/Collapse';
 import Carousel from '../../Components/Carousel/Carousel';
 import datas from '../../Data/Data.js';
+import Tag from '../../Components/Tag/Tag'
 import star_Grey from '../../Assets/star_Grey.png';
 import star_Pink from '../../Assets/star_Pink.png';
 import './LocationStyle.scss';
@@ -28,14 +29,14 @@ function Locations() {
     <div className="Locations">
       <Navbar />
       <div>
-        <Carousel items={[{ pictures: [pictures] }]} />
+        <Carousel pictures={ pictures } />
         <div className='InfoLocation'>
           <div className='InfoLocationPlace'>
             <h3 className='InfoLocationTitle'>{title}</h3>
             <h6 className='InfoLocationCity'>{location}</h6>
             <div className='InfoLocationTags'>
               {tags.map((tag, index) => (
-                <span key={index} className='Tag'>{tag}</span>
+                <Tag key={index} text={tag}/>
               ))}
             </div>
           </div>

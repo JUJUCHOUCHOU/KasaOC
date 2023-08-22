@@ -6,3 +6,9 @@
     padding-top: 2%;
     margin: 2%;
 }
+@media (max-width: 750px) {
+    .AboutMain{
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

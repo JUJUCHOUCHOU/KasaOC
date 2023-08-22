@@ -4,22 +4,22 @@ import arrow_left from '../../Assets/arrow_left.png';
 import data from '../../Data/Data.js';
 import './CarouselStyle.scss';
 
-function Carousel() {
+function Carousel({pictures}) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === data[currentIndex].pictures.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? data[currentIndex].pictures.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
   };
 
-  const slideNumber = data[currentIndex].pictures.length > 1 ? `${currentIndex + 1} / ${data[currentIndex].pictures.length}` : '';
+  const slideNumber = pictures.length > 1 ? `${currentIndex + 1} / ${pictures.length}` : '';
 
   return (
     <div className="containerCarousel">
-      {data[currentIndex].pictures.length > 1 && (
+      {pictures.length > 1 && (
         <>
           <img
             className="carousel_arrow carousel_arrow_left"
@@ -36,7 +36,7 @@ function Carousel() {
         </>
       )}
       <div className="carousel_images">
-        {data[currentIndex].pictures.map((picture, index) => (
+        {pictures.map((picture, index) => (
           <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
             <div className="image-container">
               <img className='imageCarousel' src={picture} alt={`carousel ${index + 1}`} />

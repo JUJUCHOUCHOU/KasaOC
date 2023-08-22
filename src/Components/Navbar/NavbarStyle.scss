@@ -19,3 +19,11 @@
         width: 120px;
     }
 }
+
+@media (max-width: 750px) {
+    .Navbar {
+        .NavbarLink {
+          width: 50%;
+        }
+      }
+} 
