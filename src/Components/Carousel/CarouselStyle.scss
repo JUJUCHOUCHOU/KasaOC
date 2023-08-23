@@ -38,9 +38,11 @@
 
 @media (max-width: 750px) {
     .containerCarousel{
+       
         .imageCarousel{
             height: 205px;
-            width: 295px;
+            width: 285px;
+            margin-right: 5%;
         }
         .carousel_arrow_left {
             width: 20px;
@@ -48,8 +50,8 @@
             bottom: 46%;
         }
         .carousel_arrow_right {
-            width: 10px; /* Ajuster la largeur */
-            height: 14px; /* Ajuster la hauteur */
+            width: 10px; 
+            height: 14px; 
         }
         .slideNumber{
             font-size: 12px;
