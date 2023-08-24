@@ -7,7 +7,7 @@
     margin-top: 5%;
     .image_container{
         height: 330px;
-        width: 1240px;
+        width: 95%;
     }
     .carousel_arrow{
         position: absolute; 
@@ -28,8 +28,6 @@
         font-weight: 500;
     }
     .imageCarousel{
-        height: 415px;
-        width: fit-content;
         object-fit: cover;
         @include borderRadius;
     }
@@ -41,7 +39,7 @@
        
         .imageCarousel{
             height: 205px;
-            width: 285px;
+            width: 95%;
             margin-right: 5%;
         }
         .carousel_arrow_left {

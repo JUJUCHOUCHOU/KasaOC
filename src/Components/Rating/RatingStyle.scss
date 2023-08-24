@@ -1,0 +1,22 @@
+@import "src/Sass/BaseElements.scss";
+
+.RatingHost {
+  margin-top: 1%;
+  padding-left: 146px;
+  padding-bottom: 2%;
+
+  & img {
+    width: 25px;
+    padding-left: 4%;
+  }
+}
+@media (max-width: 750px) {
+  .RatingHost {
+    width: 40%;
+    display: flex;
+    padding-left: 0px;
+    & img {
+      width: 15px;
+    }
+  }
+}

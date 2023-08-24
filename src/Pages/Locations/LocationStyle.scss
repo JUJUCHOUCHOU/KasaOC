@@ -1,4 +1,4 @@
-@import 'src/Sass/BaseElements.scss';
+@import "src/Sass/BaseElements.scss";
 
 .InfoLocation {
   display: flex;
@@ -32,55 +32,29 @@
     padding-bottom: 2%;
     width: 50%;
   }
-
+  .InfoLocationHost {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: $Pink;
+  }
   .InfoLocationOther {
     margin-right: 4%;
     margin-top: 1%;
     padding-right: 0;
-    .InfoLocationHost {
-      display: flex;
-      align-items: center;
-      color: $Pink;
-      margin-left: 0;
-    }
-
-    .InfoLocationHostName {
-      display: flex;
-      flex-direction: column;
-      margin-right: 17%;
-      font-size: 16px;
-      text-align: end;
-      font-weight: 500;
-    }
-
-    .InfoLocationPictureHost {
-      border-radius: 50%;
-      margin-bottom: 2%;
-    }
-
-    .RatingHost {
-      margin-top: 1%;
-      padding-left: 146px;
-      padding-bottom: 2%;
-
-      & img {
-        width: 25px;
-        padding-left: 4%;
-      }
-    }
   }
-}
-.collapse-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 3%;
-  .collapse-left {
-    width: calc(50% - 1%);
-  }
-  .collapse-right {
-    width: calc(50% - 1%);
-    margin-left: 2%;
+  .collapse-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 3%;
+    .collapse-left {
+      width: calc(50% - 1%);
+    }
+    .collapse-right {
+      width: calc(50% - 1%);
+      margin-left: 2%;
+    }
   }
 }
 
@@ -105,32 +79,17 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      .InfoLocationHost {
-        & img {
-          width: 32px;
-        }
-        
-      }
-
-      .RatingHost {
-        width: 40%;
-        display: flex;
-        padding-left: 0px;
-        & img {
-          width: 15px;
-        }
-      }
     }
   }
-  .collapse-container{
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    .collapse-left, .collapse-right {
-      width: 93%;
-      margin-left: 0;
-      margin-right: 0;
-    }
-   
+}
+.collapse-container {
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  .collapse-left,
+  .collapse-right {
+    width: 93%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

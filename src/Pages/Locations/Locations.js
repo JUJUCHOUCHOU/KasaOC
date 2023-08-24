@@ -6,8 +6,8 @@ import Collapse from "../../Components/Collapse/Collapse";
 import Carousel from "../../Components/Carousel/Carousel";
 import datas from "../../Data/Data.js";
 import Tag from "../../Components/Tag/Tag";
-import star_Grey from "../../Assets/star_Grey.png";
-import star_Pink from "../../Assets/star_Pink.png";
+import HostInfos from "../../Components/HostPicture/HostInfos";
+import Rating from "../../Components/Rating/Rating";
 import "./LocationStyle.scss";
 
 function Locations() {
@@ -30,10 +30,6 @@ function Locations() {
     equipments,
   } = data;
 
-  const starImages = Array.from({ length: 5 }).map((_, index) => (
-    <img key={index} src={index < rating ? star_Pink : star_Grey} alt="star" />
-  ));
-
   return (
     <div className="Locations">
       <Navbar />
@@ -51,15 +47,11 @@ function Locations() {
             </div>
           </div>
           <div className="InfoLocationOther">
-            <div className="InfoLocationHost">
-              <h6 className="InfoLocationHostName">{host.name}</h6>
-              <img
-                src={host.picture}
-                alt={`location host ${host.name}`}
-                className="InfoLocationPictureHost"
-              />
+          <div className="InfoLocationHost">
+              <HostInfos image={host.picture} text={host.name} />
             </div>
-            <div className="RatingHost">{starImages}</div>
+            <div className="RatingHost"> 
+            <Rating rating={rating} /></div>
           </div>
         </div>
         <div className="collapse-container">
