@@ -9,17 +9,19 @@
   padding-right: 5%;
   width: 80px;
 }
-.hostInfo{
-  display: contents;
-}
+
 .InfoLocationPictureHost {
   border-radius: 50%;
   margin-bottom: 2%;
 }
 @media (max-width: 750px) {
-  .InfoLocationHost {
-    & img {
+  .hostInfo{
+    display: flex;
+    align-items: center;
+  }
+  .InfoLocationPictureHost {
+    
       width: 40px;
-    }
+    
   }
 }
