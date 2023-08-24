@@ -1,4 +1,7 @@
 @import "src/Sass/BaseElements.scss";
+.hostInfo{
+  display: flex;
+  align-items: center;
 
 .InfoLocationHostName {
   display: flex;
@@ -13,6 +16,7 @@
 .InfoLocationPictureHost {
   border-radius: 50%;
   margin-bottom: 2%;
+}
 }
 @media (max-width: 750px) {
   .hostInfo{
