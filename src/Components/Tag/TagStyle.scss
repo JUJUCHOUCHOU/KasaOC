@@ -6,6 +6,15 @@
     padding: 1% 2%;
     @include collapseBorderRadius;
     text-align: center;
-    width: 105px;
-    font-size: 10px;
+    width: 155px;
+    font-size: 15px;
+}
+
+@media (max-width: 750px) {
+.InfoLocationTags {
+    .Tag {
+      width: 105px;
+      font-size: 10px;
+    }
+  }
 }
